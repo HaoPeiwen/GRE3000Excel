@@ -1,7 +1,8 @@
 import csv, re, sys
 from tkinter import *
 from tkinter import messagebox
-
+from subprocess import run
+import os
 
 class words:
     def __init__(self):
@@ -34,7 +35,13 @@ def forget():
         wordlis.interface = 0
         if wordlis.ptr not in wordlis.forget and wordlis.ptr <200 and wordlis.ptr >=0:
             wordlis.forget.append(wordlis.ptr)
+            print(wordlis.words[wordlis.ptr])
         nextword()
+
+def search():
+    word = wordlis.words[wordlis.ptr][0]
+    run('wd '+word, shell=True)
+
 
 def nextword():
     wordlis.ptr += 1
@@ -75,17 +82,16 @@ def refresh_mean():
         pass
 
 def save():
-    with open(csvname+ '_recall.csv', 'w', newline='') as f:
+    with open('/review/'+csvname+ '_recall.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         for i in wordlis.forget:
             writer.writerow(wordlis.words[i])
     messagebox.showinfo("Completed", "Saved as list1_recall.csv")
 
 
-
 window = Tk()
 window.title('GRE Rekill You 3000')
-window.geometry('600x400')
+window.geometry('700x400')
 
 text_word = StringVar()
 text_word.set('abandon')
@@ -105,20 +111,44 @@ Label(window, textvariable=text_mean[0], font=(
 Label(window, textvariable=text_mean[1], font=(
     "Times New Roman", 18), compound='center').pack()
     
-btn_login = Button(window, text='Previous', font=("Courier New", 14), command=Previous)
-btn_login.place(x=120, y=320)
-btn_login = Button(window, text='Forget', font=(
+btn_pre = Button(window, text='Previous', font=("Courier New", 14), command=Previous)
+btn_pre.place(x=120, y=320)
+btn_forg = Button(window, text='Forget', font=(
     "Courier New", 14), command=forget)
-btn_login.place(x=245, y=320)
-btn_sign_up = Button(window, text='Remember',
+btn_forg.place(x=300, y=320)
+btn_rem = Button(window, text='Remember',
                     font=("Courier New", 14), command=remember)
-btn_sign_up.place(x=370, y=320)
+btn_rem.place(x=450, y=320)
+
+btn_ser = Button(window, text='Search',
+                    font=("Courier New", 14), command=remember)
+btn_ser.place(x=300, y=280)
+
+# btn_pre.bind_all('<KeyPress-Down>', Previous) 
+# btn_forg.bind_all('<KeyPress-Left>', forget) 
+# btn_rem.bind_all('<KeyPress-Right>', remember) 
+
+def eventhandler(event):
+    if event.keysym == 'Left':
+        Previous()
+    elif event.keysym == 'Right':
+        remember()
+    elif event.keysym == 'Down':
+        forget()
+    elif event.keysym == 'Up':
+        search()
+
+btn = Button(window)
+btn_forg.bind_all('<KeyPress>', eventhandler)
+
+
+
 
 
 
 if __name__ == "__main__":
-    csvname = '再要你命3000---' + sys.argv[1]
-    with open(csvname + '.csv', 'r') as f:
+    csvname = './wordcsv/再要你命3000---' + sys.argv[1]
+    with open(csvname + '.csv', 'r', encoding='gbk') as f:
         reader = csv.reader(f)
         for row in reader:
             wordlis.words.append(row[1:])
