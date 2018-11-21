@@ -1,0 +1,5 @@
+#!/bin/bash
+save_path=$PWD
+cd /Users/yiweiwu/Documents/GRE3000Excel/wudao-dict
+./wdd $*
+cd $save_path
