@@ -10,7 +10,7 @@ import os
 class words:
     def __init__(self):
         self.words = []
-        self.ptr = 195
+        self.ptr = -1
         self.maxword = 199
         self.forget = []
         self.interface = 1 # 0 for word, 1 for meaning
