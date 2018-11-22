@@ -20,6 +20,8 @@ You can use `<KeyPress>`:
 ### Review
 When exit, it will automatically save a `xxx_review.csv` sheet in the `./review/` path, which contains a set of words you forgot in the learing process.
 
+![save-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/savedemo.png)
+
 ## Tkinter (for Python 3.x)
 
 **Note**: Check the version, Python 3.x only
