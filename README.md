@@ -40,6 +40,51 @@ Forked from [ChestnutHeng/Wudao-dict](https://github.com/ChestnutHeng/Wudao-dict
 
 ![Zh_En Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/wudao.png)
 
+## Install
+### Linux environment
+
+1. python3 & bs4, lxml(for online searching)
+    #### Debian/Ubuntu
+    ```
+    sudo apt-get install python3
+    sudo apt-get install python3-pip
+    sudo pip3 install bs4
+    sudo pip3 install lxml
+    ```
+ 
+    #### OpenSUSE
+    ```
+    sudo zypper install python3-pip
+    sudo pip3 install bs4
+    sudo pip3 install lxml
+    ```
+    #### CentOS
+    ```
+    sudo yum install python34
+    sudo yum install python34-pip
+    sudo pip3 install bs4
+    sudo pip3 install lxml
+    ```
+
+2.  install
+
+    ```
+    git clone https://github.com/HaoPeiwen/GRE3000Excel
+    cd ./wudao-dict
+    sudo bash setup.sh #or sudo ./setup.sh
+    ```
+    
+    or
+    
+    ```sh
+    git clone https://github.com/chestnutheng/wudao-dict
+    cd ./wudao-dict/wudao-dict
+    sudo bash setup.sh #or sudo ./setup.sh
+    ```
+
+    `Setup Finished!` shows successfully installed.
+
+
 ## Usage
 
     wd <word_en or word_zh>
