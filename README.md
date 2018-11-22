@@ -2,7 +2,7 @@
 
 ## Words-learning Script
 
-The word lists are located in `./wordcsv` from 1 to 16. Run python script to learn those: `$ python learning.py <list_number>`
+The word lists are located in `./wordcsv/` from 1 to 16. Run python script to learn those: `$ python learning.py <list_number>`
 
 For `List 1`
 
@@ -17,6 +17,8 @@ You can use `<KeyPress>`:
 - `Right`: Rememebr
 - `Up`: Search (Using [Wudao command dict](#1.3))
 
+### Review
+When exit, it will automatically save a `xxx_review.csv` sheet in the `./review/` path, which contains a set of words you forgot in the learing process.
 
 ## Tkinter (for Python 3.x)
 
