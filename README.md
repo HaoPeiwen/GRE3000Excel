@@ -8,7 +8,7 @@ For `List 1`
 
     python learning.py 1
 
-![learning-demo]()
+![learning-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demo.png)
 
 You can use `<KeyPress>`: 
 
@@ -38,7 +38,7 @@ Then, run `update-python-modules` with the `-a` option to rebuild all the module
 Forked from [ChestnutHeng/Wudao-dict](https://github.com/ChestnutHeng/Wudao-dict).
 
 
-![Zh_En Demo]()
+![Zh_En Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/wudao.png)
 
 ## Usage
 
