@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import csv, re, sys
 from tkinter import *
 from tkinter import messagebox
@@ -77,7 +80,7 @@ def refresh_mean():
                 text_mean.append(StringVar())
                 text_mean[i].set(m[i])
                 Label(window, textvariable=text_mean[i], font=(
-                    "Times New Roman", 20), compound='center').pack()
+                    "Times New Roman", 22), compound='center').pack()
     except:
         pass
 
@@ -103,26 +106,26 @@ text_mean[1].set('v.放弃')
 
 
 Label(window, text=' ', font=(
-    "Times New Roman", 25), compound='center').pack()
+    "Times New Roman", 28), compound='center').pack()
 Label(window, textvariable=text_word, font=(
-    "Times New Roman", 25), compound='center').pack()
+    "Times New Roman", 36), compound='center').pack()
 Label(window, textvariable=text_mean[0], font=(
-    "Times New Roman", 18), compound='center').pack()
+    "Times New Roman", 22), compound='center').pack()
 Label(window, textvariable=text_mean[1], font=(
-    "Times New Roman", 18), compound='center').pack()
+    "Times New Roman", 22), compound='center').pack()
     
 btn_pre = Button(window, text='Previous', font=("Courier New", 14), command=Previous)
-btn_pre.place(x=120, y=320)
+btn_pre.place(x=220, y=320)
 btn_forg = Button(window, text='Forget', font=(
     "Courier New", 14), command=forget)
-btn_forg.place(x=300, y=320)
+btn_forg.place(x=320, y=320)
 btn_rem = Button(window, text='Remember',
                     font=("Courier New", 14), command=remember)
-btn_rem.place(x=450, y=320)
+btn_rem.place(x=410, y=320)
 
 btn_ser = Button(window, text='Search',
                     font=("Courier New", 14), command=remember)
-btn_ser.place(x=300, y=280)
+btn_ser.place(x=320, y=280)
 
 # btn_pre.bind_all('<KeyPress-Down>', Previous) 
 # btn_forg.bind_all('<KeyPress-Left>', forget) 
