@@ -4,7 +4,7 @@
 
 The word lists are located in `./wordcsv/` from 1 to 16. Run python script to learn those: `$ python learning.py <list_number>`
 
-For `List 1`
+For `List 1` as an example: 
 
     python learning.py 1
 
@@ -15,7 +15,7 @@ You can use `<KeyPress>`:
 - `Left`: Previous
 - `Down`: Forget
 - `Right`: Rememebr
-- `Up`: Search (Using [Wudao command dict](#1.3))
+- `Up`: Search (Using [Wudao command dict](https://github.com/ChestnutHeng/Wudao-dict))
 
 ### Review
 When exit, it will automatically save a `xxx_review.csv` sheet in the `./review/` path, which contains a set of words you forgot in the learing process.
@@ -41,6 +41,7 @@ Then, run `update-python-modules` with the `-a` option to rebuild all the module
 
 Forked from [ChestnutHeng/Wudao-dict](https://github.com/ChestnutHeng/Wudao-dict).
 
+You can apply `wd <word>` command on Linux OS only by cloning this repository.
 
 ![Zh_En Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/wudao.png)
 
