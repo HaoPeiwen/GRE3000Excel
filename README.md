@@ -8,7 +8,7 @@ For `List 1` as an example:
 
     python learning.py 1
 
-![learning-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demo.png)
+![learning-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demoimg/demo.png)
 
 You can use `<KeyPress>`: 
 
@@ -20,7 +20,7 @@ You can use `<KeyPress>`:
 ### Review
 When exit, it will automatically save a `xxx_review.csv` sheet in the `./review/` path, which contains a set of words you forgot in the learing process.
 
-![save-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/savedemo.png)
+![save-demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demoimg/savedemo.png)
 
 ## Tkinter (for Python 3.x)
 
@@ -43,7 +43,8 @@ Forked from [ChestnutHeng/Wudao-dict](https://github.com/ChestnutHeng/Wudao-dict
 
 You can apply `wd <word>` command on Linux OS only by cloning this repository.
 
-![Zh_En Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/wudao.png)
+![Zh_En Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demoimg/wudao1.png)
+![En_Zh Demo](https://raw.githubusercontent.com/HaoPeiwen/GRE3000Excel/master/demoimg/wudao2.png)
 
 ## Install
 ### Linux environment
