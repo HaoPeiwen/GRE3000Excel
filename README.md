@@ -1,5 +1,10 @@
 # GRE3000 Excel Version
 
+![](https://img.shields.io/pypi/pyversions/Django.svg) 
+![](https://img.shields.io/apm/l/vim-mode.svg)
+
+
+
 ## Words-learning Script
 
 The word lists are located in `./wordcsv/` from 1 to 16. Run python script to learn those: `$ python learning.py <list_number>`
